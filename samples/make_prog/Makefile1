@@ -1,0 +1,27 @@
+CC=gcc
+FLAGS= -Wall
+RM=rm -f
+SOURCE_FILES = hello.c myprint.c
+INCLUDE_FILES = myprint.h
+
+all: main hello
+
+.DEFAULT_GOAL= hello
+
+#%: %.c:
+#	${CC} $< ${FLAGS} -o $@
+
+#main: main.c
+#	${CC} main.c -o main
+
+#main: main.c
+#	${CC} $< -o $@
+
+hello: hello.c
+	${CC} ${SOURCE_FILES} ${INCLUDE_FILES}  -o $@
+
+.PHONY: clean
+
+clean: 
+	${RM} hello main
+
