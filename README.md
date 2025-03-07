@@ -3,6 +3,8 @@ Learning
 
 This repository is meant to be used for learning C++, linux and Other self-learning purposes.
 
+simple notes and relevant learning files, codes, references will be kept here.
+
 git config:
 * this first will modify the file "config" in .git folder of my repository
 which means the setting i have here is local to my repository.
