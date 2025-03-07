@@ -1,0 +1,72 @@
+1. Branch Management
+Command	Option	Description
+git branch	-d	Deletes a branch safely (prevents deletion if unmerged).
+			-D	Force deletes a branch (even if unmerged).
+git switch	-c	Creates and switches to a new branch.
+git checkout	-b	Creates and switches to a new branch (older method).
+________________________________________
+2. Commit Management
+Command	Option	Description
+git commit	-m "message"	Adds a commit message directly.
+			--amend	Modifies the last commit (useful for fixing commit messages or adding more changes).
+________________________________________
+3. Staging & Working Directory
+Command	Option	Description
+git add	-A	Stages all changes (new, modified, deleted files).
+		.	Stages all changes in the current directory.
+		-p	Interactively stages only selected parts of changes.
+git reset	--soft	Moves HEAD back to a previous commit, keeping changes staged.
+			--mixed	Moves HEAD back, keeping changes but unstaging them.
+			--hard	Moves HEAD back and discards all changes.
+________________________________________
+4. Fetching & Pulling Changes
+Command	Option	Description
+git fetch	--all	Fetches updates from all remotes.
+git pull	--rebase	Rebases changes instead of merging (keeps a cleaner history).
+________________________________________
+5. Pushing Changes
+Command	Option	Description
+git push	-u origin branch-name	Sets upstream branch (useful for first push).
+			--force (-f)	Forces a push, overwriting remote changes (use with caution!).
+			--force-with-lease	Safer force push (only if no one else pushed changes).
+________________________________________
+6. Merging & Rebasing
+Command	Option	Description
+git merge	--no-ff	Creates a merge commit even if a fast-forward is possible (keeps history).
+		--squash	Squashes all commits from a branch into a single commit (doesn’t auto-commit).
+git rebase	-i	Interactive rebase (allows reordering, squashing, or modifying commits).
+________________________________________
+7. Logging & History
+Command	Option	Description
+git log	--oneline	Shows commits in a compact, one-line format.
+		--graph	Shows a visual representation of branches and merges.
+		--author="name"	Filters commits by author.
+git diff	--staged	Shows differences between the staged changes and the last commit.
+			HEAD~1	Compares current working state with the previous commit.
+________________________________________
+8. Undoing Changes
+Command	Option	Description
+git checkout	-- file	Reverts a file to its last committed state.
+git reset	--hard HEAD	Discards all local changes.
+git revert	<commit-hash>	Creates a new commit that undoes a specific commit (safe alternative to reset).
+________________________________________
+9. git clean
+Command	Option	Description
+git clean	-n	Dry run – Shows what would be deleted without actually deleting anything.
+			-f	Force – Deletes untracked files (required since Git won’t delete files by default).
+			-d	Removes untracked directories as well as files.
+			-x	Removes ignored and untracked files (useful for full cleanup).
+			-X	Removes only ignored files, keeping other untracked files.
+________________________________________
+10. git stash
+Command	Option	Description
+git stash	(no option)	Stashes uncommitted changes (tracked files only).
+			-u or --include-untracked	Stashes untracked files along with tracked files.
+			-a or --all	Stashes everything, including ignored files.
+git stash list		Shows all stashes with IDs.
+git stash apply		Reapplies the most recent stash but keeps it in the stash list.
+git stash pop		Applies the most recent stash and removes it from the list.
+git stash drop		Deletes the most recent stash without applying it.
+git stash clear		Deletes all stashed changes.
+________________________________________
+
