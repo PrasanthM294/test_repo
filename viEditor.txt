@@ -1,0 +1,58 @@
+important Vi commands
+ ______________________
+To split
+:Vsp Path
+:sp path
+ctrl W W to switch
+______________________
+Cut copy paste
+Dw cut a word
+Dd cut a line
+Yy copy a line
+Yw copy a word
+Y3 copy 3 lines from here
+P paste
+______________________
+To search
+Simply press * to see other instances
+/search word to search <Enter>
+N for next 
+P for previous
+______________________
+To open specific line in file
+Vim Filepath +3
+Opens 3rd line in this file
+______________________
+Press % to see if braces are closed
+______________________
+To set bookmark
+Press m and <any alphabet>
+To come back 
+‘ and <alphabet set>
+
+Eg: 
+ma = set marker A
+‘a = to come back
+______________________
+Using Ctags
+Iike intellisense in VScode
+
+Use ctrl + ] = go to definition
+
+Or G + ] = list all definitions 
+
+Ctrl + t = return back
+______________________
+To open another file while in Vim editor
+
+:e filename
+
+To switch between files
+:n
+:prev
+
+To list all files opened 
+:args
+
+Or :ls to list all files
+______________________

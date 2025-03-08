@@ -1,0 +1,16 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC       = arm-linux-gnueabihf-gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS   = -O2 -g$/;"	m
+ERROR_OUT	src/hello.c	4;"	d	file:
+INCLUDES	Makefile	/^INCLUDES = -I .\/$(INCLUDE_DIR)$/;"	m
+INCLUDE_DIR	Makefile	/^INCLUDE_DIR = include$/;"	m
+SOURCES	Makefile	/^SOURCES = $(wildcard $(SRC_DIR)\/*.c)$/;"	m
+SRC_DIR	Makefile	/^SRC_DIR   = src$/;"	m
+TARGET	Makefile	/^TARGET = test$/;"	m
+main	src/hello.c	/^int main(int argc, unsigned char *argv[]) {$/;"	f
+print	src/myprint.c	/^void print(unsigned char arg[])$/;"	f
